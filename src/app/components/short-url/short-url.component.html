@@ -1,0 +1,21 @@
+<div class="container mt-3 text-center">
+  <h1 class="display-5">INGRESE LA URL A ACORTAR</h1>
+  <div *ngIf="mensaje != ''" class="alert alert-dismissible alert-danger mt-2">
+    <strong>{{mensaje}}</strong>
+  </div>
+  <div class="row mt-5">
+    <div class="col-lg-8">
+       <input type="text" [(ngModel)]="nombreUrl" name="" id="" class="form-control form-control-lg" placeholder="Ingrese la url...">
+      
+    </div>
+    <div class="col-lg-4">
+      <button style="width: 100%; height: 100%;" (click)="procesarUrl()" class="btn btn-primary btn-block btn-lg">ACEPTAR</button>
+    </div>
+  </div>
+  <div *ngIf="estado" class="row mt-5">
+    <div class="col-lg-8">
+      <input type="text" [(ngModel)]="procesadadUrl"  name="" id="" class="form-control form-control-lg" placeholder="Url procesadad...">
+   </div>
+  </div>
+  <app-spinner *ngIf="loading"></app-spinner>
+</div>
