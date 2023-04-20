@@ -49,6 +49,7 @@ export class ShortUrlComponent {
       this.procesadadUrl = data.link;
     }, error => {
       this.loading = false;
+      this.nombreUrl = '';
       this.mensaje = 'LA URL ES INVALIDAD';
       setTimeout(() => {
         this.mensaje = '';
